@@ -1,0 +1,50 @@
+{
+  "name": "react-notes-app",
+  "version": "1.0.0",
+  "description": "Notes app to edit, delete, save notes",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "test": "echo \"No test specified\" && exit 0",
+    "build": "webpack --mode production",
+    "eslint": "eslint src --ext .jsx --ext .js",
+    "eslint-fix": "eslint --fix src --ext .jsx --ext .js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harshmakadia/notes-app-webpack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Harshmakadia/notes-app-webpack/issuess"
+  },
+  "author": "Harsh Makadia",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.12.4",
+    "react-hot-loader": "^4.3.11",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "css-loader": "^2.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.6.0",
+    "react-bootstrap": "^1.0.0-beta.5",
+    "react-dom": "^16.6.0",
+    "style-loader": "^0.23.1"
+  }
+}

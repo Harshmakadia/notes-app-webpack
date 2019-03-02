@@ -1,0 +1,29 @@
+.notes-playground {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    margin-top: 10px;
+}
+
+/*@media screen and (max-height: 450px) {*/
+    /*.sidenav {padding-top: 15px;}*/
+    /*.sidenav a {font-size: 18px;}*/
+/*}*/
+
+.active-title, .active-title:focus, .active-content, .active-content:focus{
+    border: 1px dashed #9FA8DA !important;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline-width: 0 !important;
+    -webkit-tap-highlight-color: transparent;
+    resize: none;
+    background: #e6e8ea;
+    margin-bottom: 10px;
+}
+
+.active-content{
+  font-size: 18px;
+ }

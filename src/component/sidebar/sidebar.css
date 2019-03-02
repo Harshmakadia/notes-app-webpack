@@ -1,0 +1,53 @@
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1A237E;
+    overflow-x: hidden;
+    padding-top: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sidenav .note-title-section {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    display: block;
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+}
+
+.sidenav .note-title-section:hover {
+    color: #ffffff;
+    background: #3949AB;
+}
+
+.sidenav .note-title-section:hover .close-icon {
+    visibility: visible;
+}
+
+.close-icon{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    float: right;
+    visibility: hidden;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 800;
+}
+
+.search-section{
+    margin: 10px 0px;
+    width: 170px;
+}
