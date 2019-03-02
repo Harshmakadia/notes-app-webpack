@@ -1,7 +1,10 @@
+// Importing Modules, Components and functions
 import React, { Component } from 'react';
-import './home.css';
 import Sidebar from '../component/sidebar/sidebar';
 import { GetNotesFromStorage, SetNotesInStorage, GetNewFileName } from '../helper';
+
+// Importing CSS files
+import './home.css';
 
 class Home extends Component {
   static saveNotesToStorage(notes) {
@@ -17,6 +20,7 @@ class Home extends Component {
       openNoteObj: {},
       searchText: '',
     };
+    // function Binding
     this.addNewNotes = this.addNewNotes.bind(this);
     this.openNote = this.openNote.bind(this);
     this.deleteNote = this.deleteNote.bind(this);

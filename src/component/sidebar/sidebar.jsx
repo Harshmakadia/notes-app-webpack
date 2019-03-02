@@ -1,7 +1,11 @@
+// Importing Modules, Components and functions
 import React from 'react';
-import './sidebar.css';
 import PropTypes from 'prop-types';
 
+// Importing CSS files
+import './sidebar.css';
+
+// Defining Stateless function
 function Sidebar(props) {
   const {
     notes, addNewNotes, onSearchTrigger, searchText, deleteNote,
