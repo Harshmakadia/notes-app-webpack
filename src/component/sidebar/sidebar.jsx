@@ -8,10 +8,10 @@ import './sidebar.css';
 // Defining Stateless function
 function Sidebar(props) {
   const {
-    notes, addNewNotes, onSearchTrigger, searchText, deleteNote,
+    notes, addNewNotes, onSearchTrigger, searchText, deleteNote, closeSidebar, openNote,
   } = props;
   const noteItems = notes.map(note => (
-    <div role="presentation" className="note-title-section" key={note.id} onClick={() => props.openNote(note.id)}>
+    <div role="presentation" className="note-title-section" key={note.id} onClick={() => openNote(note.id)}>
       <span className="notes-title">{note.name}</span>
       <span role="presentation" className="close-icon" onClick={() => deleteNote(note.id)}>X</span>
     </div>
@@ -19,6 +19,7 @@ function Sidebar(props) {
 
   return (
     <div className="sidenav">
+      <span role="presentation" className="close-icon-main" onClick={() => closeSidebar(false)}>X</span>
       <span role="presentation" className="note-title-section" onClick={addNewNotes}> Add Note ( + ) </span>
       <input
         type="text"
@@ -40,6 +41,7 @@ Sidebar.propTypes = {
   searchText: PropTypes.string,
   notes: PropTypes.oneOfType([PropTypes.string, PropTypes.bool, PropTypes.object, PropTypes.array]),
   openNote: PropTypes.func,
+  closeSidebar: PropTypes.func,
 };
 Sidebar.defaultProps = {
   searchText: '',
@@ -47,6 +49,7 @@ Sidebar.defaultProps = {
   addNewNotes: () => null,
   deleteNote: () => null,
   openNote: () => null,
+  closeSidebar: () => null,
   notes: [],
 };
 

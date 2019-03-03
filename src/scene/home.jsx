@@ -2,9 +2,11 @@
 import React, { Component } from 'react';
 import Sidebar from '../component/sidebar/sidebar';
 import { GetNotesFromStorage, SetNotesInStorage, GetNewFileName } from '../helper';
+import MenuIcon from '../component/menu/menu';
 
 // Importing CSS files
 import './home.css';
+
 
 class Home extends Component {
   static saveNotesToStorage(notes) {
@@ -19,12 +21,14 @@ class Home extends Component {
       allNotes: [],
       openNoteObj: {},
       searchText: '',
+      showSideBar: true,
     };
     // function Binding
     this.addNewNotes = this.addNewNotes.bind(this);
     this.openNote = this.openNote.bind(this);
     this.deleteNote = this.deleteNote.bind(this);
     this.onSearchTrigger = this.onSearchTrigger.bind(this);
+    this.toggleSideBar = this.toggleSideBar.bind(this);
   }
 
   componentDidMount() {
@@ -109,25 +113,44 @@ class Home extends Component {
     }
   }
 
+  // Toggle the state of sidebar
+  toggleSideBar(sidebarStatus) {
+    this.setState({ showSideBar: sidebarStatus });
+  }
 
   render() {
     const {
-      allNotes, showNoteDetails, openNoteObj, searchText,
+      allNotes, showNoteDetails, openNoteObj, searchText, showSideBar,
     } = this.state;
     return (
       <div className="container-fluid">
-        <Sidebar
-          openNote={this.openNote}
-          notes={allNotes}
-          onSearchTrigger={this.onSearchTrigger}
-          searchText={searchText}
-          deleteNote={this.deleteNote}
-          addNewNotes={this.addNewNotes}
-        />
+        {showSideBar
+          ? (
+            <Sidebar
+              openNote={this.openNote}
+              notes={allNotes}
+              onSearchTrigger={this.onSearchTrigger}
+              searchText={searchText}
+              deleteNote={this.deleteNote}
+              addNewNotes={this.addNewNotes}
+              closeSidebar={this.toggleSideBar}
+            />
+          ) : (
+            <div role="presentation" className="menu-icon-container" onClick={() => this.toggleSideBar(true)}>
+              {' '}
+              <MenuIcon />
+              {' '}
+            </div>
+          )}
 
         {showNoteDetails
                     && (
-                    <div className="notes-playground">
+                    <div
+                      className="notes-playground"
+                      style={{
+                        marginLeft: showSideBar ? 200 : 0,
+                      }}
+                    >
                       <input
                         name="name"
                         type="text"

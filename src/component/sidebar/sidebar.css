@@ -7,7 +7,6 @@
     left: 0;
     background-color: #1A237E;
     overflow-x: hidden;
-    padding-top: 20px;
     margin: 0 auto;
     text-align: center;
 }
@@ -50,4 +49,16 @@
 .search-section{
     margin: 10px 0px;
     width: 170px;
+}
+
+.close-icon-main{
+    float: right;
+    padding-right: 3px;
+    font-size: 30px;
+    color: #ffffff;
+    background: #f54d4d;
+    border-radius: 42px;
+    width: 45px;
+    margin: 7px;
+    cursor: pointer;
 }
