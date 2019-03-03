@@ -20,7 +20,7 @@ function Sidebar(props) {
   return (
     <div className="sidenav">
       <span role="presentation" className="close-icon-main" onClick={() => closeSidebar(false)}>X</span>
-      <span role="presentation" className="note-title-section" onClick={addNewNotes}> Add Note ( + ) </span>
+      <div role="presentation" className="note-title-section" onClick={addNewNotes}> Add Note ( + ) </div>
       <input
         type="text"
         placeholder="Search...."
@@ -29,6 +29,7 @@ function Sidebar(props) {
         className="search-section"
         value={searchText}
       />
+
       {noteItems}
     </div>
   );

@@ -1,7 +1,11 @@
+// Importing Modules
 import React from 'react';
+
+// Importing CSS
 import './menu.css';
 
-function MeunIcon() {
+// Stateless Component
+function MenuIcon() {
   return (
     <React.Fragment>
       <div className="menu-icon-div" />
@@ -11,4 +15,4 @@ function MeunIcon() {
   );
 }
 
-export default MeunIcon;
+export default MenuIcon;

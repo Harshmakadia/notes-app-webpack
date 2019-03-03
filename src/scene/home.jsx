@@ -7,7 +7,6 @@ import MenuIcon from '../component/menu/menu';
 // Importing CSS files
 import './home.css';
 
-
 class Home extends Component {
   static saveNotesToStorage(notes) {
     SetNotesInStorage(notes);
@@ -144,34 +143,42 @@ class Home extends Component {
           )}
 
         {showNoteDetails
-                    && (
-                    <div
-                      className="notes-playground"
-                      style={{
-                        marginLeft: showSideBar ? 200 : 0,
-                      }}
-                    >
-                      <input
-                        name="name"
-                        type="text"
-                        className="container-fluid active-title"
-                        value={openNoteObj.name}
-                        placeholder="Title"
-                        onChange={e => this.updateNote(e, openNoteObj.id)}
-                      />
+          ? (
+            <div
+              className="notes-playground"
+              style={{
+                marginLeft: showSideBar ? 350 : 0,
+              }}
+            >
+              <input
+                name="name"
+                type="text"
+                className="container-fluid active-title"
+                value={openNoteObj.name}
+                placeholder="Title"
+                onChange={e => this.updateNote(e, openNoteObj.id)}
+              />
 
-                      <textarea
-                        name="content"
-                        rows="20"
-                        cols="50"
-                        className="container-fluid active-content"
-                        placeholder="Content"
-                        onChange={e => this.updateNote(e, openNoteObj.id)}
-                        value={openNoteObj.content}
-                      />
-                    </div>
-                    )
-                }
+              <textarea
+                name="content"
+                rows="20"
+                cols="50"
+                className="container-fluid active-content"
+                placeholder="Content"
+                onChange={e => this.updateNote(e, openNoteObj.id)}
+                value={openNoteObj.content}
+              />
+            </div>
+          ) : (
+            <div className="no-note-message" style={{ marginLeft: showSideBar ? 350 : 0 }}>
+              <h1>
+                {' '}
+                No Note selected
+              </h1>
+              <i>Navigate to Sidebar to add more notes </i>
+            </div>
+          )
+        }
       </div>
     );
   }

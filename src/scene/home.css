@@ -5,11 +5,6 @@
     margin-top: 10px;
 }
 
-/*@media screen and (max-height: 450px) {*/
-    /*.sidenav {padding-top: 15px;}*/
-    /*.sidenav a {font-size: 18px;}*/
-/*}*/
-
 .active-title, .active-title:focus, .active-content, .active-content:focus{
     border: 1px dashed #9FA8DA !important;
     overflow: auto;
@@ -30,4 +25,9 @@
 
 .menu-icon-container{
     margin-left: 10px;
+}
+
+.no-note-message{
+    text-align: center;
+    margin-top: 20px;
 }
