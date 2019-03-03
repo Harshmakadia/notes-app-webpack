@@ -2,13 +2,13 @@
     height: 100%;
     width: 350px;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
     background-color: #1A237E;
-    overflow-x: hidden;
     margin: 0 auto;
     text-align: center;
+    overflow-x: hidden;
+    z-index: 1;
 }
 
 .sidenav .note-title-section {
@@ -25,13 +25,24 @@
     width: 100%;
 }
 
-.sidenav .note-title-section:hover {
-    color: #ffffff;
-    background: #f54d4d;
+/* If it is mobile device show X icons*/
+@media (max-width: 767px) {
+    .close-icon {
+        visibility: visible !important;
+    }
 }
 
-.sidenav .note-title-section:hover .close-icon {
-    visibility: visible;
+/* Show hovering effect on devices greater than 768px */
+@media (min-width: 768px) {
+    .sidenav .note-title-section:hover {
+        color: #ffffff;
+        background: #f54d4d;
+    }
+
+    .sidenav .note-title-section:hover .close-icon {
+        visibility: visible;
+    }
+
 }
 
 .close-icon{
@@ -40,9 +51,13 @@
     right: 5px;
     float: right;
     visibility: hidden;
-    font-size: 18px;
-    color: #000000;
     font-weight: 800;
+    font-size: 18px;
+    background: #ffffff;
+    width: 27px;
+    text-align: center;
+    color: #f54d4d;
+    border-radius: 25px;
 }
 
 .search-section{
