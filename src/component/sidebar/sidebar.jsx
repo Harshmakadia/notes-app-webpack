@@ -10,6 +10,8 @@ function Sidebar(props) {
   const {
     notes, addNewNotes, onSearchTrigger, searchText, deleteNote, closeSidebar, openNote,
   } = props;
+
+  // Rendering each note title
   const noteItems = notes.map(note => (
     <div role="presentation" className="note-title-section" key={note.id} onClick={() => openNote(note.id)}>
       <span className="notes-title">{note.name}</span>

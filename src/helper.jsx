@@ -1,30 +1,6 @@
 // This is helper file were all the function which can be commonly used throughout the app are placed here
 
 /**
- * Debouncer function .
- * @param {function} (the name of function where the deboucning has to be applied on)
- * @param {wait} (time is milliseconds for which the debouncing is required)
- * @return null;
- */
-export const Debounce = function (func, wait, immediate) {
-  let timeout;
-  return function () {
-    const context = this; const
-    /* In ES2015 (ES6) or later, if you don’t want to be notified about arguments variables, then it’s safe to disable prefer-rest-params rule. */
-      args = arguments; // eslint-disable-line
-    const later = function () {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    const callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-};
-
-
-/**
  * Get the values from localStorage .
  * @param null
  * @return The JSON (array of objects) containing details of all the notes

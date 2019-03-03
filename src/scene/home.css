@@ -19,11 +19,11 @@
     margin-bottom: 10px;
 }
 
-.active-content{
+.notes-playground .active-content{
   font-size: 18px;
  }
 
-.menu-icon-container{
+.notes-playground.menu-icon-container{
     margin-left: 10px;
 }
 
