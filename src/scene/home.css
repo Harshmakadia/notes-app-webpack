@@ -23,8 +23,9 @@
   font-size: 18px;
  }
 
-.notes-playground.menu-icon-container{
+.menu-icon-container{
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .no-note-message{
